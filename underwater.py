@@ -251,8 +251,7 @@ class Underwater:
 
         self.background.draw_transportation(self.screen, offset_new, offset_old, time)
 
-        if self.room.boss_in_room:
-            self.room.draw_boss_skeleton(self.screen, *offset_new, new_room=True)
+        self.room.draw_boss_skeleton(self.screen, *offset_new)
         self.room.draw_text(self.screen, *offset_new)
         self.room.draw_bubbles(self.screen, *offset_new)
         self.player.draw(self.screen, *offset_new)
@@ -377,8 +376,7 @@ class Underwater:
         self.background.draw_background(surface)
         self.background.draw_room_background(surface, *self.camera.offset)
         self.background.draw_player_background(surface, *self.camera.offset)
-        if self.room.boss_in_room:
-            self.room.draw_boss_skeleton(surface, *self.camera.offset)
+        self.room.draw_boss_skeleton(surface, *self.camera.offset)
         self.room.draw_text(surface, *self.camera.offset)
         self.room.draw_bottom_effects(surface, *self.camera.offset)
 

@@ -294,8 +294,6 @@ BOSS_SKELETON_BODY = [[75, 3, PURPLE, 630, 0.936 * pi,          False, 0, 0, 0, 
                       [20, 2, BLUE,   846, pi,                  False, 0, 0, 0, True,  False],
                       [18, 2, BLUE,   873, pi,                  False, 0, 0, 0, True,  False],
                       [14, 1, RED,    894, pi,                  False, 0, 0, 0, True,  False]]
-
-BOSS_SKELETON_HEALTH_STATES = ((0, ),)
 ###############################################################################
 TURTLE_BODY =  [[22, 3, BLUE,   50, pi,          True, 0.016, 15, 0.1, False, False],
                 [22, 3, BLUE,   50, 0.00,        True, 0.016, 15, 0.1, False, False],

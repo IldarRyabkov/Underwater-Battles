@@ -141,17 +141,7 @@ class LevelGenerator:
         health = player_health + PLAYER_EXTRA_HEALTH[player_level]
 
         if health <= 30:
-            if not self.boss_was_generated:
-                n_peaceful_mobs = 0
-                mobs['BossSkeleton'] = 1
-                mobs['BossLeg'] = 1
-                mobs['BossHandLeft'] = 1
-                mobs['BossHandRight'] = 1
-                mobs['BossHead'] = 1
-                self.boss_was_generated = True
-                self.boss_new = True
-            else:
-                n_peaceful_mobs = randint(2, 4)
+            n_peaceful_mobs = randint(2, 4)
 
         elif health <= 60:
             n_peaceful_mobs = randint(3, 6)
@@ -252,6 +242,14 @@ class LevelGenerator:
             elif group_2 == 4:
                 mobs['Scarab'] = randint(2, 3)
 
+        elif health >= 1420 and not self.boss_was_generated:
+            n_peaceful_mobs = 0
+            mobs['BossLeg'] = 1
+            mobs['BossHandLeft'] = 1
+            mobs['BossHandRight'] = 1
+            mobs['BossHead'] = 1
+            self.boss_was_generated = True
+            self.boss_new = True
         else:
             n_peaceful_mobs = randint(1, 4)
 

@@ -315,7 +315,7 @@ class Gun50(Gun40):
 class Gun51(Gun21):
     def __init__(self):
         super().__init__()
-        self.cooldown_time = 80
+        self.cooldown_time = 100
         self.radius = 15
 
 
